@@ -71,7 +71,10 @@
         <imageio-ext.version>1.1.15</imageio-ext.version>
         <jts.version>1.13</jts.version>
         <avro.version>1.7.5</avro.version>
-        <parquet.version>1.9.0</parquet.version>
+        
+        <parquet.version>1.8.1-cdh5.7.0</parquet.version>
+        <parquet.groupId>org.apache.parquet</parquet.groupId>
+        
         <jackson.codehaus.version>1.9.3</jackson.codehaus.version>
         <gdal.version>2.0.0</gdal.version>
         <json4s.version>3.2.10</json4s.version>
@@ -2028,12 +2031,12 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.apache.parquet</groupId>
+                <groupId>${parquet.groupId}</groupId>
                 <artifactId>parquet-column</artifactId>
                 <version>${parquet.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.parquet</groupId>
+                <groupId>${parquet.groupId}</groupId>
                 <artifactId>parquet-hadoop</artifactId>
                 <version>${parquet.version}</version>
                  <exclusions>
@@ -2982,6 +2985,11 @@
             <id>conjars.org</id>
             <url>http://conjars.org/repo</url>
         </repository>
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/content/repositories/releases/</url>
+        </repository>
+
     </repositories>
 
 </project>
